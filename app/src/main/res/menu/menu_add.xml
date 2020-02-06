@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.cookingdiary.MainActivity">
+
+    <item
+        android:id="@+id/app_bar_done"
+        android:icon="@drawable/ic_done"
+        android:title="Done"
+        app:showAsAction="always|collapseActionView"
+        />
+</menu>

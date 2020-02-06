@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/app_name" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="20dp">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/linearLayoutDetails1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="Ingredienti:"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="10pt"
+                        android:textStyle="italic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/ingrediente1details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView"
+                        app:layout_constraintTop_toBottomOf="@+id/textView"
+                        tools:text="ingrediente1" />
+
+                    <TextView
+                        android:id="@+id/grammi1details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/ingrediente1details"
+                        app:layout_constraintTop_toBottomOf="@+id/textView"
+                        tools:text="grammi1" />
+
+                    <TextView
+                        android:id="@+id/grammi1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="grammi"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/grammi1details"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+                    <TextView
+                        android:id="@+id/ingrediente2details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/ingrediente1details"
+                        app:layout_constraintTop_toBottomOf="@+id/ingrediente1details"
+                        tools:text="ingrediente2" />
+
+                    <TextView
+                        android:id="@+id/grammi2details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/ingrediente2details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi1details"
+                        tools:text="grammi2" />
+
+                    <TextView
+                        android:id="@+id/grammi2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="grammi"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/grammi2details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi1" />
+
+                    <TextView
+                        android:id="@+id/ingrediente3details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/ingrediente2details"
+                        app:layout_constraintTop_toBottomOf="@+id/ingrediente2details"
+                        tools:text="ingrediente3" />
+
+                    <TextView
+                        android:id="@+id/grammi3details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/ingrediente3details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi2details"
+                        tools:text="grammi3" />
+
+                    <TextView
+                        android:id="@+id/grammi3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="grammi"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/grammi3details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi2" />
+
+                    <TextView
+                        android:id="@+id/ingrediente4details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/ingrediente3details"
+                        app:layout_constraintTop_toBottomOf="@+id/ingrediente3details"
+                        tools:text="ingrediente4" />
+
+                    <TextView
+                        android:id="@+id/grammi4details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/ingrediente4details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi3details"
+                        tools:text="grammi4" />
+
+                    <TextView
+                        android:id="@+id/grammi4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="grammi"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/grammi4details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi3" />
+
+                    <TextView
+                        android:id="@+id/ingrediente5details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/ingrediente4details"
+                        app:layout_constraintTop_toBottomOf="@+id/ingrediente4details"
+                        tools:text="ingrediente5" />
+
+                    <TextView
+                        android:id="@+id/grammi5details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/ingrediente5details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi4details"
+                        tools:text="grammi5" />
+
+                    <TextView
+                        android:id="@+id/grammi5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="grammi"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/grammi5details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi4" />
+
+                    <TextView
+                        android:id="@+id/ingrediente6details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/ingrediente5details"
+                        app:layout_constraintTop_toBottomOf="@+id/ingrediente5details"
+                        tools:text="ingrediente6" />
+
+                    <TextView
+                        android:id="@+id/grammi6details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/ingrediente6details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi5details"
+                        tools:text="grammi6" />
+
+                    <TextView
+                        android:id="@+id/grammi6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="grammi"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/grammi6details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi5" />
+
+                    <TextView
+                        android:id="@+id/ingrediente7details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/ingrediente6details"
+                        app:layout_constraintTop_toBottomOf="@+id/ingrediente6details"
+                        tools:text="ingrediente7" />
+
+                    <TextView
+                        android:id="@+id/grammi7details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/ingrediente7details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi6details"
+                        tools:text="grammi7" />
+
+                    <TextView
+                        android:id="@+id/grammi7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="grammi"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/grammi7details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi6" />
+
+                    <TextView
+                        android:id="@+id/ingrediente8details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/ingrediente7details"
+                        app:layout_constraintTop_toBottomOf="@+id/ingrediente7details"
+                        tools:text="ingrediente8" />
+
+                    <TextView
+                        android:id="@+id/grammi8details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/ingrediente8details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi7details"
+                        tools:text="grammi8" />
+
+                    <TextView
+                        android:id="@+id/grammi8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="grammi"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/grammi8details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi7" />
+
+                    <TextView
+                        android:id="@+id/ingrediente9details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/ingrediente8details"
+                        app:layout_constraintTop_toBottomOf="@+id/ingrediente8details"
+                        tools:text="ingrediente9" />
+
+                    <TextView
+                        android:id="@+id/grammi9details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/ingrediente9details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi8details"
+                        tools:text="grammi9" />
+
+                    <TextView
+                        android:id="@+id/grammi9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="grammi"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/grammi9details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi8" />
+
+                    <TextView
+                        android:id="@+id/ingrediente10details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/ingrediente9details"
+                        app:layout_constraintTop_toBottomOf="@+id/ingrediente9details"
+                        tools:text="ingrediente10" />
+
+                    <TextView
+                        android:id="@+id/grammi10details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/ingrediente10details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi9details"
+                        tools:text="grammi10" />
+
+                    <TextView
+                        android:id="@+id/grammi10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="grammi"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toEndOf="@+id/grammi10details"
+                        app:layout_constraintTop_toBottomOf="@+id/grammi9" />
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:id="@+id/numeroPersoneTitoloDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="Numero persone: "
+                        android:textSize="10pt"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/numeroPersoneDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        tools:text="numero persone" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="20dp"
+                android:id="@+id/cardViewCal"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="Calorie: "
+                        android:textSize="10pt"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="italic"
+                        android:id="@+id/calorieTitolo"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        tools:text="calorie"
+                        android:id="@+id/calorie"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="kcal"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        android:id="@+id/kcal"/>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:id="@+id/preparazioneTitoloDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:padding="3dp"
+                        android:text="Preparazione:"
+                        android:textSize="10pt"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/preparazioneDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="2dp"
+                        android:padding="3dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        tools:text="Preparazione..." />
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:elevation="4dp"
+                app:cardCornerRadius="20dp"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:id="@+id/paroleChiaveTitoloDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:padding="3dp"
+                        android:text="Parole chiave:"
+                        android:textSize="10pt"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/paroleChiaveDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="2dp"
+                        android:padding="3dp"
+                        android:textSize="8pt"
+                        android:textStyle="bold"
+                        tools:text="parola chiave" />
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
